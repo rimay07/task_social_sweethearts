@@ -100,4 +100,47 @@ let Model = function(){
 			}
 		}
 	];
+	
+	this.animals = [
+		{
+			"type": "clam",
+			"range": {
+						"min": 0,
+						"max": 20
+					},
+			"message" : "Clam message"
+		},
+		{
+			"type": "frog",
+			"range": {
+						"min": 21,
+						"max": 40
+					},
+			"message" : "Frog message"
+		},
+		{
+			"type": "bat",
+			"range": {
+						"min": 41,
+						"max": 60
+					},
+			"message" : "Bat message"
+		},
+		{
+			"type": "tamaraw",
+			"range": {
+						"min": 61,
+						"max": 80
+					},
+			"message" : "Tamaraw message"
+		},
+		{
+			"type": "eagle",
+			"range": {
+						"min": 81,
+						"max": 100
+					},
+			"message" : "Eagle message"
+		}
+	];
 }
