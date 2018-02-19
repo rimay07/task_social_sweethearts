@@ -3,28 +3,100 @@ var Model = function(){
 		{
 			"question" : "test 1",
 			"options" : {
-				"a" : "a1",
-				"b" : "b1",
-				"c" : "c1",
-				"d" : "d1"
+				"a" : {
+					"answer1":"a1",
+					"range": {
+						"min": 0;
+						"max": 25;
+					}
+				},
+				"b" : {
+					"answer2":"b1",
+					"range": {
+						"min": 26;
+						"max": 50;
+					}
+				},
+				"c" : {
+					"answer3":"c1",
+					"range": {
+						"min": 51;
+						"max": 75;
+					}
+				},
+				"d" : {
+					"answer4":"d1",
+					"range": {
+						"min": 76;
+						"max": 100;
+					}
+				}
 			}
 		},
 		{
 			"question" : "test 2",
 			"options" : {
-				"a" : "a2",
-				"b" : "b2",
-				"c" : "c2",
-				"d" : "d2"
+				"a" : {
+					"answer1":"a2",
+					"range": {
+						"min": 0;
+						"max": 25;
+					}
+				},
+				"b" : {
+					"answer2":"b2",
+					"range": {
+						"min": 26;
+						"max": 50;
+					}
+				},
+				"c" : {
+					"answer3":"c2",
+					"range": {
+						"min": 51;
+						"max": 75;
+					}
+				},
+				"d" : {
+					"answer4":"d2",
+					"range": {
+						"min": 76;
+						"max": 100;
+					}
+				}
 			}
 		},
 		{
 			"question" : "test 3",
 			"options" : {
-				"a" : "a3",
-				"b" : "b3",
-				"c" : "c3",
-				"d" : "d3"
+				"a" : {
+					"answer1":"a3",
+					"range": {
+						"min": 0;
+						"max": 25;
+					}
+				},
+				"b" : {
+					"answer2":"b3",
+					"range": {
+						"min": 26;
+						"max": 50;
+					}
+				},
+				"c" : {
+					"answer3":"c3",
+					"range": {
+						"min": 51;
+						"max": 75;
+					}
+				},
+				"d" : {
+					"answer4":"d3",
+					"range": {
+						"min": 76;
+						"max": 100;
+					}
+				}
 			}
 		}
 	];
