@@ -5,27 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What is your Animal appetite</title>
 <script src="js/model.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/answers.js"></script>
 <script>
 var model = new Model();
 var quiz = model.questions;
-
+var question = new Quiz();
+var answers = new Answers();
 var counter = 0;
 
-var getNextQuestion = function(){
-	var question = document.getElementById("question");
-	document.getElementById("nextBTN").value = "Next";
-	if(counter >= quiz.length){
-		alert(counter);
-		return;
-	}else {
-		if (counter == quiz.length -1){
-			document.getElementById("nextBTN").value = "Calculate";
-		}
-		question.innerHTML = quiz[counter].question;
-		console.log(quiz.length);
-		counter ++;
-	}
+function getNextQuestion(){
+	question.getNextQuestion(quiz);
 }
+
 
 </script>
 </head>
@@ -33,7 +25,7 @@ var getNextQuestion = function(){
 
 <section>
   <h1 id="question">Start</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+  <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
   dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus. 
   Elementum eu facilisis sed odio morbi quis commodo. Sit amet luctus venenatis lectus magna 
   fringilla urna. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Fames ac 
