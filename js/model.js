@@ -1,4 +1,4 @@
-var Model = function(){
+let Model = function(){
 	this.questions = [
 		{
 			"question" : "test 1",

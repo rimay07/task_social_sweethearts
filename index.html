@@ -8,16 +8,15 @@
 <script src="js/quiz.js"></script>
 <script src="js/answers.js"></script>
 <script>
-var model = new Model();
-var quiz = model.questions;
-var question = new Quiz();
-var answers = new Answers();
-var counter = 0;
+let model = new Model();
+let quiz = model.questions;
+let question = new Quiz();
+let answers = new Answers();
+let counter = 0;
 
 function getNextQuestion(){
 	question.getNextQuestion(quiz);
 }
-
 
 </script>
 </head>
