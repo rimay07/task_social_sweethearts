@@ -4,6 +4,30 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What is your Animal appetite</title>
+<script src="js/model.js"></script>
+<script>
+var model = new Model();
+var quiz = model.questions;
+
+var counter = 0;
+
+var getNextQuestion = function(){
+	var question = document.getElementById("question");
+	document.getElementById("nextBTN").value = "Next";
+	if(counter >= quiz.length){
+		alert(counter);
+		return;
+	}else {
+		if (counter == quiz.length -1){
+			document.getElementById("nextBTN").value = "Calculate";
+		}
+		question.innerHTML = quiz[counter].question;
+		console.log(quiz.length);
+		counter ++;
+	}
+}
+
+</script>
 </head>
 <body>
 
@@ -19,5 +43,11 @@
   </p>
   <input type="button" id="nextBTN" value="Start">
 </section>
+<script>
+(function onInit(){
+	document.getElementById("nextBTN").addEventListener("click", getNextQuestion);
+}).call();
+</script>
+
 </body>
 </html>
