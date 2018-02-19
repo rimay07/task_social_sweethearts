@@ -1,18 +1,19 @@
-var Answers = function (){
+let Answers = function (){
 	this.quizScores = [];
+	this.totalScore = 0;
 }
 
 Answers.prototype = {
 	constructor: Answers,
 	
 	getScore:function(min, max){
-		var score = Math.floor(Math.random() * max) + min;
+		let score = Math.floor(Math.random() * max) + min;
 		this.quizScores.push(score);
 	},
 	
 	addScore:function(){
-		var reducer = (total, currValue) => total + currValue;
-		var scores = (this.quizScores.length > 0)? this.quizScores.reduce(reducer) : "No score yet";
+		let reducer = (total, currValue) => total + currValue;
+		let scores = (this.quizScores.length > 0)? this.quizScores.reduce(reducer) : "No score yet";
 		return scores/this.quizScores.length;
 	}
 }

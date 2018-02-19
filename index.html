@@ -7,11 +7,14 @@
 <script src="js/model.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/answers.js"></script>
+<script src="js/animal.js"></script>
 <script>
-let model = new Model();
+var model = new Model();
 let quiz = model.questions;
-let question = new Quiz();
-let answers = new Answers();
+let animals = model.animals;
+var question = new Quiz();
+var answers = new Answers();
+var animal = new Animal();
 let counter = 0;
 
 function getNextQuestion(){
@@ -21,6 +24,7 @@ function getNextQuestion(){
 </script>
 </head>
 <body>
+
 
 <section>
   <h1 id="question">Start</h1>
