@@ -35,9 +35,9 @@ let animalObj;
 function populateSelection(quiz, counter){
 	var html = "";
 	var options = quiz[counter].options;
-	for (prop in options){
+	Object.keys(options).forEach(function(prop){
 		html += "<input type='radio' name='testAnswers' onclick='getScore(this.value)' value='" + options[prop].range.min + ", " + options[prop].range.max  + "'>" + options[prop].answer + "<br>";
-	}
+	})
 	html += ""
 	content.innerHTML = html;
 }
