@@ -6,7 +6,8 @@ let Animal = function(){
 Animal.prototype = {
 	constructor: Animal,
 	calculateAnimal:function(){
-		return animals.map(seekAnimalType).filter(function(n){ return n != undefined });
+		var obj = animals.map(seekAnimalType).filter(function(n){ return n != undefined });
+		return obj;
 	}
 };
 
