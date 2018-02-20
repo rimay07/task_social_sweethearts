@@ -7,7 +7,7 @@ Answers.prototype = {
 	constructor: Answers,
 	
 	getScore:function(min, max){
-		let score = Math.floor(Math.random() * max) + min;
+		let score = Math.floor(Math.random() * (max - min + 1)) + min;
 		this.quizScores.push(score);
 	},
 	
