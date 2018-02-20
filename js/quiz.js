@@ -4,7 +4,13 @@ Quiz.prototype = {
 	constructor: Quiz,
 	
 	getNextQuestion:function(quiz){
-		if(tempValue !== null) calculateScore(tempValue);
+		if(tempValue !== null) {
+			calculateScore(tempValue);
+			tempValue = null;
+		}else if(tempValue == null && counter != 0){
+			alert('Please make a selection');
+			return;
+		}
 		questionElem = document.getElementById("question");
 		btn = document.getElementById("nextBTN");
 		content = document.getElementById("content");
