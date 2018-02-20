@@ -26,13 +26,14 @@ function getNextQuestion(){
 </head>
 <body>
 
+
 <section>
   <h1 id="question">How wild is your appetite?</h1>
   <p id="content">
   </p>
   <input type="button" id="nextBTN" value="Start">
-  <!--img src="images/leftbush.png" id="bushLeft">
-  <img src="images/rightbush.png" id="bushRight"-->
+  <img src="images/leftbush.png" id="bushLeft">
+  <img src="images/rightbush.png" id="bushRight">
 </section>
 <script>
 (function onInit(){
