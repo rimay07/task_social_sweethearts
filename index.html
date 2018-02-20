@@ -4,11 +4,13 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What is your Animal appetite</title>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
 <script type="text/javascript" src="js/model.js"></script>
 <script type="text/javascript" src="js/quiz.js"></script>
 <script type="text/javascript" src="js/answers.js"></script>
 <script type="text/javascript" src="js/animal.js"></script>
 <script>
+
 let model = new Model();
 let quiz = model.questions;
 let animals = model.animals;
@@ -25,16 +27,12 @@ function getNextQuestion(){
 <body>
 
 <section>
-  <h1 id="question">Start</h1>
-  <p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-  dolore magna aliqua. Laoreet suspendisse interdum consectetur libero id faucibus. 
-  Elementum eu facilisis sed odio morbi quis commodo. Sit amet luctus venenatis lectus magna 
-  fringilla urna. Morbi blandit cursus risus at ultrices mi tempus imperdiet nulla. Fames ac 
-  turpis egestas maecenas pharetra. Sit amet nisl purus in mollis nunc. Sed ullamcorper morbi 
-  tincidunt ornare massa. Sed turpis tincidunt id aliquet risus feugiat in ante. Nunc sed blandit 
-  libero volutpat sed cras ornare.
+  <h1 id="question">How wild is your appetite?</h1>
+  <p id="content">
   </p>
   <input type="button" id="nextBTN" value="Start">
+  <img src="images/leftbush.png" id="bushLeft">
+  <img src="images/rightbush.png" id="bushRight">
 </section>
 <script>
 (function onInit(){
