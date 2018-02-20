@@ -55,7 +55,7 @@ function addClickListener(){
 	});
 
 	function findIndex( elem ) {
-		for(var listIdx = 0; listIdx<items.length; listIdx++) {
+		for(var listIdx = 0; listIdx < items.length; listIdx++) {
 			if (items[listIdx] === elem) {
 				return listIdx;
 			}
@@ -66,10 +66,10 @@ function addClickListener(){
 
 function getScore(idx){
 	var keys = Object.keys( options );
-	var obj = new Object();
-	obj.min = options[keys[idx]].range.min;
-	obj.max = options[keys[idx]].range.max;
-	tempValue = obj;
+	var rangeObj = new Object();
+	rangeObj.min = options[keys[idx]].range.min;
+	rangeObj.max = options[keys[idx]].range.max;
+	tempValue = rangeObj;
 }
 
 function calculateScore(range){
