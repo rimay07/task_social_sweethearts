@@ -24,6 +24,20 @@ body, html{
 
 #nextBTN:focus {outline:0;}
 
+#animalType{
+	text-align: center;
+	color: #7e7618;
+	font-size: 30px;
+	font-family: arial, helvetica, san-serif;
+}
+
+#totalScore{
+	text-align: center;
+	color: #7e7618;
+	font-size: 30px;
+	font-family: arial, helvetica, san-serif;
+}
+
 @media only screen and (min-width: 800px) {
 	section{
 		max-width:80%;
