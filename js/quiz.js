@@ -1,34 +1,38 @@
-var Quiz = function(){};
+let Quiz = function(){};
 
 Quiz.prototype = {
 	constructor: Quiz,
 	
 	getNextQuestion:function(quiz){
-		if(tempValue !== null) calculateScore(tempValue);
-		var question = document.getElementById("question");
-		var btn  = document.getElementById("nextBTN");
+		if(tempValue !== null) {
+			calculateScore(tempValue);
+			tempValue = null;
+		}else if(tempValue == null && counter != 0){
+			alert('Please make a selection');
+			return;
+		}
+		questionElem = document.getElementById("question");
+		btn = document.getElementById("nextBTN");
+		content = document.getElementById("content");
 		btn.value = "Next";
 		if(counter >= quiz.length){
-			alert(Math.round(answers.addScore()));
-			var content = document.getElementById("content");
-			btn.style.display = "none";
-			content.innerHTML = "";
+			finalScore();
 			return;
 		}else {
 			if (counter == quiz.length -1){
 				btn.value = "Calculate";
 			}
-			question.innerHTML = quiz[counter].question;
+			questionElem.innerHTML = quiz[counter].question;
 			populateSelection(quiz, counter);
 			counter ++;
 		}
 	}
 }
 
-var tempValue = null;
+let tempValue = null
+let animalObj;
 
 function populateSelection(quiz, counter){
-	var content = document.getElementById("content");
 	var html = "";
 	var options = quiz[counter].options;
 	for (prop in options){
@@ -45,5 +49,14 @@ function getScore(val){
 function calculateScore(tmp){
 	var range = tmp.split(',');
 	answers.getScore(parseInt(range[0]), parseInt(range[1]));
+}
+
+function finalScore(){
+	answers.totalScore = Math.round(answers.addScore());
+	animalObj = animal.calculateAnimal();
+	btn.style.display = "none";
+	content.innerHTML = "<div>" + animalObj[0].type + "</div>" +
+						"<div>" + animalObj[0].message + "</div>" +
+						"<div>" + answers.totalScore + "</div>";
 }
 	
