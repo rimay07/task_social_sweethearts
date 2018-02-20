@@ -45,7 +45,7 @@ function populateSelection(quiz, counter){
 
 function addClickListener(){
 	var selectionList = document.getElementById("selection");
-    var items = selectionList.getElementsByTagName("li");
+    	var items = selectionList.getElementsByTagName("li");
 
 	selectionList.addEventListener("click", function(e) {
 		var evt = e || window.event,
