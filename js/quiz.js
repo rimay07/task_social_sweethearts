@@ -33,22 +33,47 @@ let tempValue = null
 let animalObj;
 
 function populateSelection(quiz, counter){
-	var html = "";
-	var options = quiz[counter].options;
+	var html = "<ul id='selection'>";
+	options = quiz[counter].options;
 	Object.keys(options).forEach(function(prop){
-		html += "<input type='radio' name='testAnswers' onclick='getScore(this.value)' value='" + options[prop].range.min + ", " + options[prop].range.max  + "'>" + options[prop].answer + "<br>";
+		html += "<li>" + options[prop].answer + "</li>";
 	})
-	html += ""
+	html += "</ul>"
 	content.innerHTML = html;
+	addClickListener();
 }
 
-function getScore(val){
-	tempValue = val;
+function addClickListener(){
+	var selectionList = document.getElementById("selection"),
+    items = selectionList.getElementsByTagName("li");
+
+	selectionList.addEventListener("click", function(e) {
+		var evt = e || window.event,
+		src = evt.target || evt.srcElement;
+		var idx = findIndex(src);
+		getScore(idx);
+	});
+
+	function findIndex( elem ) {
+		for(var listIdx = 0; listIdx<items.length; listIdx++) {
+			if (items[listIdx] === elem) {
+				return listIdx;
+			}
+		}
+		return -1;
+	}
 }
 
-function calculateScore(tmp){
-	var range = tmp.split(',');
-	answers.getScore(parseInt(range[0]), parseInt(range[1]));
+function getScore(idx){
+	var keys = Object.keys( options );
+	var obj = new Object();
+	obj.min = options[keys[idx]].range.min;
+	obj.max = options[keys[idx]].range.max;
+	tempValue = obj;
+}
+
+function calculateScore(range){
+	answers.getScore(range.min, range.max);
 }
 
 function finalScore(){
