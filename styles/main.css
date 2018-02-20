@@ -16,24 +16,13 @@ body, html{
 	display:block;
 	margin:0 auto;
 	position: absolute;
-	top: 75%;
+	top: 80%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index:5000;
 }
 
 #nextBTN:focus {outline:0;}
-
-li{
-	list-style-type: none;
-	background-color: #7e7618;
-	padding: 15px;
-	width:40%;
-	color: white;
-	font: bold 28px 'Trebuchet MS';
-	text-align:center;
-	cursor:pointer;
-}
 
 @media only screen and (min-width: 800px) {
 	section{
@@ -49,6 +38,10 @@ li{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 30px;
+		background-image: url("../images/background.png");
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		background-position: center bottom;
 	}
 	
 	h1{
@@ -58,25 +51,24 @@ li{
 		font-family: arial, helvetica, san-serif;
 	}
 	
-	#bushLeft {
-		position:absolute;
-		left:0px;
-		/*top:45%;*/
-		top:49%;
-		border-radius: 0px 0px 0px 20px;
-		max-width: 60%; height: auto;
-		vertical-align:bottom;
-		z-index: -5000;
+	li{
+		list-style-type: none;
+		background-color: #7e7618;
+		padding: 15px;
+		width:91%;
+		color: white;
+		font: bold 28px 'Trebuchet MS';
+		text-align:center;
+		cursor:pointer;	
 	}
-	#bushRight {
-		position:absolute;
-		left:20%;
-		top:32%;
-		border-radius: 20px 20px 20px 20px;
-		max-width: 80%; height: auto;
-		z-index:-10000;
+	
+	li:hover{
+		background-color: #726900;
 	}
-
+	
+	li:active{
+		background-color: #b0a527;
+	}
 }
 
 @media only screen and (max-width: 500px) and (min-width: 300px) {
@@ -93,33 +85,38 @@ li{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 30px;
+		background-image: url("../images/background.png");
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		background-position: center bottom;
 	}
 	
 	h1{
 		text-align: center;
 		color: #7e7618;
-		font-size: 25px;
+		font-size: 20px;
 		font-family: arial, helvetica, san-serif;
 	}
-	
-	#bushLeft {
-		position:absolute;
-		left:0px;
-		top:68%;
-		border-radius: 0px 0px 0px 20px;
-		max-width: 90%; height: auto;
-	}
-	#bushRight {
-		position:absolute;
-		left:10%;
-		top:68%;
-		border-radius: 20px 20px 20px 20px;
-		max-width: 90%; height: auto;
-	}
+		
 	li{
-		width:80%;
-		font: bold 20px 'Trebuchet MS';
+		list-style-type: none;
+		background-color: #7e7618;
+		padding: 15px;
+		width:75%;
+		color: white;
+		font: bold 16px 'Trebuchet MS';
+		text-align:center;
+		cursor:pointer;
 	}
+	
+	li:hover{
+		background-color: #726900;
+	}
+	
+	li:active{
+		background-color: #b0a527;
+	}
+
 }
 
 @media only screen and (max-width: 799px) and (min-width:501px){
@@ -136,6 +133,10 @@ li{
 		left: 50%;
 		transform: translate(-50%, -50%);
 		border-radius: 30px;
+		background-image: url("../images/background.png");
+		background-repeat:no-repeat;
+		background-size:100% auto;
+		background-position: center bottom;
 	}
 	
 	h1{
@@ -145,18 +146,23 @@ li{
 		font-family: arial, helvetica, san-serif;
 	}
 	
-	#bushLeft {
-		position:absolute;
-		left:0px;
-		top:58%;
-		border-radius: 0px 0px 0px 20px;
-		max-width: 90%; height: auto;
+	li{
+		list-style-type: none;
+		background-color: #7e7618;
+		padding: 15px;
+		width:85%;
+		color: white;
+		font: bold 20px 'Trebuchet MS';
+		text-align:center;
+		cursor:pointer;
 	}
-	#bushRight {
-		position:absolute;
-		left:10%;
-		top:58%;
-		border-radius: 20px 20px 20px 20px;
-		max-width: 90%; height: auto;
+	
+	li:hover{
+		background-color: #726900;
 	}
+	
+	li:active{
+		background-color: #b0a527;
+	}
+
 }

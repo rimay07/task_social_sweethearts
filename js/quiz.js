@@ -55,12 +55,17 @@ function addClickListener(){
 	});
 
 	function findIndex( elem ) {
-		for(var listIdx = 0; listIdx < items.length; listIdx++) {
+		var len = items.length; 
+		var listIdx = 0;
+		var selectedIdx = 0;
+		for(listIdx; listIdx < len; listIdx++) {
+			items[listIdx].style.backgroundColor = "#7e7618";
 			if (items[listIdx] === elem) {
-				return listIdx;
+				items[listIdx].style.backgroundColor = "#b0a527";
+				selectedIdx = listIdx;
 			}
 		}
-		return -1;
+		return selectedIdx;
 	}
 }
 
