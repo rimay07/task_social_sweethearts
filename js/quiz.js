@@ -85,8 +85,20 @@ function finalScore(){
 	answers.totalScore = Math.round(answers.addScore());
 	animalObj = animal.calculateAnimal();
 	btn.style.display = "none";
-	content.innerHTML = "<div>" + animalObj[0].type + "</div>" +
-						"<div>" + animalObj[0].message + "</div>" +
-						"<div>" + answers.totalScore + "</div>";
+	content.innerHTML = "<div id='animalType'></div>" +
+						"<div id='message'></div>" +
+						"<div id='totalScore'></div>";
+	displayResults();
+}
+
+function displayResults(){
+	var message = document.getElementById('totalScore');
+	var scoreTab = 0;
+	for (var b = 0; b < answers.totalScore; b++){
+		setTimeout(function(){
+			message.innerHTML = scoreTab;
+			scoreTab++;
+		}, b*50, b)
+	}
 }
 	
