@@ -64,8 +64,12 @@ ul {
 #message{
 	text-align: center;
 	color: #7e7618;
-	font-size: 30px;
-	font-family: arial, helvetica, san-serif;
+	font: bold 28px 'Trebuchet MS';
+}
+
+#message:hover{
+	color:#FFFFFF;
+	cursor:pointer;
 }
 
 #content{

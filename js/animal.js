@@ -11,12 +11,14 @@ Animal.prototype = {
 	}
 };
 
+//Find animal associated with the result
 function seekAnimalType(ani){
 	let min = ani.range.min;
 	let max = ani.range.max;
 	if(answers.totalScore > min && answers.totalScore < max){
 		let animalObject = new Object();
 		animalObject.type = ani.type;
+		animalObject.messageLink = ani.messageLink;
 		animalObject.message = ani.message;
 		animalObject.imageURL = ani.imageURL;
 		return animalObject;
