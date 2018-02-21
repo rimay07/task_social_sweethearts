@@ -18,6 +18,7 @@ function seekAnimalType(ani){
 		let animalObject = new Object();
 		animalObject.type = ani.type;
 		animalObject.message = ani.message;
+		animalObject.imageURL = ani.imageURL;
 		return animalObject;
 	};
 }
