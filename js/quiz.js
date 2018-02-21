@@ -127,4 +127,3 @@ function displayResults(){
 function showMessage(){
 	alert(animalObj[0].message);
 }
-	
