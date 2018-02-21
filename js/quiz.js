@@ -95,6 +95,10 @@ function calculateScore(range){
 function finalScore(){
 	answers.totalScore = Math.round(answers.addScore());
 	animalObj = animal.calculateAnimal();
+	if(animalObj == null || animalObj.length == 0){
+		finalScore();
+		return;
+	}
 	btn.style.display = "none";
 	content.innerHTML = "<div id='animalType'></div>" +
 						"<div id='totalScore'></div>" +
