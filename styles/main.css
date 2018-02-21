@@ -4,38 +4,86 @@ body, html{
 	background-color: #bf96ba;
 }
 
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
 #nextBTN{
 	border: 1px solid #777777;
 	background: #7e7618;
 	color: white;
 	font: bold 28px 'Trebuchet MS';
-	padding: 20px;
+	padding: 5px 20px 5px 20px;
 	cursor: pointer;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	display:block;
 	margin:0 auto;
 	position: absolute;
-	top: 80%;
+	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index:5000;
 }
 
 #nextBTN:focus {outline:0;}
+#nextBTN:hover {
+	background-color: #726900;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+}
 
 #animalType{
+	text-align: center;
+	/*color: #7e7618;
+	font-size: 120px;
+	font-family: arial, helvetica, san-serif;*/
+}
+
+#animalImg{
+	display: block;
+	max-width:300px;
+	max-height:200px;
+	width: auto;
+	height: auto;
+	margin:0 auto;
+	/*position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);*/
+}
+
+#totalScore{
+	text-align: center;
+	color: #7e7618;
+	font-size: 50px;
+	font-family: arial, helvetica, san-serif;
+	font: bold;
+}
+
+#message{
 	text-align: center;
 	color: #7e7618;
 	font-size: 30px;
 	font-family: arial, helvetica, san-serif;
 }
 
-#totalScore{
-	text-align: center;
-	color: #7e7618;
-	font-size: 30px;
-	font-family: arial, helvetica, san-serif;
+#content{
+	margin:0 auto;
+	position: absolute;
+	width:80%;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#landingImg{
+	width:80%;
+	margin:0 auto;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 @media only screen and (min-width: 800px) {
@@ -69,7 +117,7 @@ body, html{
 		list-style-type: none;
 		background-color: #7e7618;
 		padding: 15px;
-		width:91%;
+		width:96%;
 		color: white;
 		font: bold 28px 'Trebuchet MS';
 		text-align:center;
@@ -116,7 +164,7 @@ body, html{
 		list-style-type: none;
 		background-color: #7e7618;
 		padding: 15px;
-		width:75%;
+		width:87%;
 		color: white;
 		font: bold 16px 'Trebuchet MS';
 		text-align:center;
@@ -164,7 +212,7 @@ body, html{
 		list-style-type: none;
 		background-color: #7e7618;
 		padding: 15px;
-		width:85%;
+		width:93%;
 		color: white;
 		font: bold 20px 'Trebuchet MS';
 		text-align:center;
