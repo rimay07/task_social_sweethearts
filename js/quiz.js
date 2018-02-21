@@ -4,16 +4,19 @@ Quiz.prototype = {
 	constructor: Quiz,
 	
 	getNextQuestion:function(quiz){
-		if(tempValue !== null) {
-			calculateScore(tempValue);
-			tempValue = null;
-		}else if(tempValue == null && counter != 0){
-			alert('Please make a selection');
-			return;
-		}
 		questionElem = document.getElementById("question");
 		btn = document.getElementById("nextBTN");
 		content = document.getElementById("content");
+		
+		if(tempValue !== null) {
+			calculateScore(tempValue);
+			tempValue = null;
+		}else if(tempValue == null && counter != 0 && (btn.value != "Play Again")){
+			alert('Please make a selection');
+			return;
+		}else if(btn && (btn.value == "Play Again")){
+			location.reload();
+		}
 		btn.value = "Next";
 		if(counter >= quiz.length){
 			finalScore();
@@ -60,8 +63,10 @@ function addClickListener(){
 		var selectedIdx = 0;
 		for(listIdx; listIdx < len; listIdx++) {
 			items[listIdx].style.backgroundColor = "#7e7618";
+			items[listIdx].style.color = "#FFFFFF";
 			if (items[listIdx] === elem) {
 				items[listIdx].style.backgroundColor = "#b0a527";
+				items[listIdx].style.color = "#7e7618";
 				selectedIdx = listIdx;
 			}
 		}
@@ -86,19 +91,30 @@ function finalScore(){
 	animalObj = animal.calculateAnimal();
 	btn.style.display = "none";
 	content.innerHTML = "<div id='animalType'></div>" +
-						"<div id='message'></div>" +
-						"<div id='totalScore'></div>";
+						"<div id='totalScore'></div>" +
+						"<div id='message'></div>";
+	questionElem.innerHTML = "You have an appetite equal to: ";
 	displayResults();
 }
 
 function displayResults(){
-	var message = document.getElementById('totalScore');
+	var animal = document.getElementById('animalType');
+	var score = document.getElementById('totalScore');
+	var message = document.getElementById('message');
 	var scoreTab = 0;
 	for (var b = 0; b < answers.totalScore; b++){
 		setTimeout(function(){
-			message.innerHTML = scoreTab;
+			score.innerHTML = scoreTab;
 			scoreTab++;
-		}, b*50, b)
+			
+			if (scoreTab == answers.totalScore){
+				animal.innerHTML = "<img id='animalImg' src='" + animalObj[0].imageURL + "'>" ;
+				message.innerHTML = animalObj[0].message;
+				score.innerHTML += " " + animalObj[0].type + "s";
+				btn.style.display = "block";
+				btn.value = "Play Again";
+			}
+		}, b*10, b)
 	}
 }
 	
