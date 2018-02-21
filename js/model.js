@@ -1,3 +1,5 @@
+//Model object will contain the questions and animal array. 
+//This is a scalable model that can be adjusted in size.
 let Model = function(){
 	this.questions = [
 		{
@@ -240,7 +242,8 @@ let Model = function(){
 						"min": 0,
 						"max": 20
 					},
-			"message" : "Clam message",
+			"messageLink" : "CLAM Message",
+			"message" : "Oh boy ... you eat a lot and all the time!\nJust like the clams who are bottom feeders\nand who eats everything in motion in the water,\nsaying NO to food is not an option! ",
 			"imageURL" : "images/clam.png"
 		},
 		{
@@ -249,7 +252,8 @@ let Model = function(){
 						"min": 21,
 						"max": 40
 					},
-			"message" : "Eagle message",
+			"messageLink" : "EAGLE Message",
+			"message" : "You can be opportunistic when eating \n- like you love to avail of all buy one take one food, \neat all you can and you love eating for free!",
 			"imageURL" : "images/eagle.png"
 		},
 		{
@@ -258,7 +262,8 @@ let Model = function(){
 						"min": 41,
 						"max": 60
 					},
-			"message" : "Bat message",
+			"messageLink" : "BAT Message",
+			"message" : "You are a picky eater!  \nJust like the bats who have specific diet, you have a \ntendency to stick to 1 diet like be a vegan, \nvegetarian or meat eater.",
 			"imageURL" : "images/bat.png"
 		},
 		{
@@ -267,7 +272,8 @@ let Model = function(){
 						"min": 61,
 						"max": 80
 					},
-			"message" : "Monkey message",
+			"messageLink" : "MONKEY Message",
+			"message" : "You are the healthiest of all \neating small quantities of healthy food like nuts, fruits, vegetables!",
 			"imageURL" : "images/monkey.png"
 		},
 		{
@@ -276,7 +282,8 @@ let Model = function(){
 						"min": 81,
 						"max": 100
 					},
-			"message" : "Pig message",
+			"messageLink" : "PIG Message",
+			"message" : "Food is life!  \nYou are never a picky eater because just like the pig, \nyou will eat everything in sight. ",
 			"imageURL" : "images/pig.png"
 		}
 	];

@@ -3,6 +3,7 @@ let Quiz = function(){};
 Quiz.prototype = {
 	constructor: Quiz,
 	
+	//Dynamically change the question when the user interacts with the game
 	getNextQuestion:function(quiz){
 		questionElem = document.getElementById("question");
 		btn = document.getElementById("nextBTN");
@@ -17,6 +18,7 @@ Quiz.prototype = {
 		}else if(btn && (btn.value == "Play Again")){
 			location.reload();
 		}
+		
 		btn.value = "Next";
 		if(counter >= quiz.length){
 			finalScore();
@@ -35,6 +37,7 @@ Quiz.prototype = {
 let tempValue = null
 let animalObj;
 
+//Fill up the selection options
 function populateSelection(quiz, counter){
 	var html = "<ul id='selection'>";
 	options = quiz[counter].options;
@@ -46,6 +49,8 @@ function populateSelection(quiz, counter){
 	addClickListener();
 }
 
+//Adds click handler to each element and changes the appearance 
+//base on the selected value
 function addClickListener(){
 	var selectionList = document.getElementById("selection");
     var items = selectionList.getElementsByTagName("li");
@@ -92,11 +97,12 @@ function finalScore(){
 	btn.style.display = "none";
 	content.innerHTML = "<div id='animalType'></div>" +
 						"<div id='totalScore'></div>" +
-						"<div id='message'></div>";
+						"<div id='message' onclick='showMessage()'></div>";
 	questionElem.innerHTML = "You have an appetite equal to: ";
 	displayResults();
 }
 
+//Displays final result on the screen
 function displayResults(){
 	var animal = document.getElementById('animalType');
 	var score = document.getElementById('totalScore');
@@ -109,12 +115,16 @@ function displayResults(){
 			
 			if (scoreTab == answers.totalScore){
 				animal.innerHTML = "<img id='animalImg' src='" + animalObj[0].imageURL + "'>" ;
-				message.innerHTML = animalObj[0].message;
+				message.innerHTML = animalObj[0].messageLink;
 				score.innerHTML += " " + animalObj[0].type + "s";
 				btn.style.display = "block";
 				btn.value = "Play Again";
 			}
-		}, b*10, b)
+		}, b*50, b)
 	}
+}
+
+function showMessage(){
+	alert(animalObj[0].message);
 }
 	
