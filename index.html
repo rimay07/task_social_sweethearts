@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is your Animal appetite</title>
+<title>Your Animal Appetite</title>
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 <script type="text/javascript" src="js/model.js"></script>
 <script type="text/javascript" src="js/quiz.js"></script>
@@ -27,13 +27,13 @@ function getNextQuestion(){
 <body>
 
 <section>
-  <h1 id="question">How wild is your appetite?</h1>
-  <p id="content">
-  </p>
+  <h1 id="question">Find your Animal Appetite</h1>
+  <div id="content">
+	<img id="landingImg" src="images/food.jpg">
+  </div>
   <input type="button" id="nextBTN" value="Start">
-  <!--img src="images/leftbush.png" id="bushLeft">
-  <img src="images/rightbush.png" id="bushRight"-->
 </section>
+
 <script>
 (function onInit(){
 	document.getElementById("nextBTN").addEventListener("click", getNextQuestion);
