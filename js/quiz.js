@@ -17,6 +17,7 @@ Quiz.prototype = {
 			return;
 		}else if(btn && (btn.value == "Play Again")){
 			location.reload();
+			return;
 		}
 		
 		btn.value = "Next";
@@ -109,18 +110,18 @@ function displayResults(){
 	var message = document.getElementById('message');
 	var scoreTab = 0;
 	for (var b = 0; b < answers.totalScore; b++){
-		setTimeout(function(){
-			score.innerHTML = scoreTab;
-			scoreTab++;
-			
-			if (scoreTab == answers.totalScore){
-				animal.innerHTML = "<img id='animalImg' src='" + animalObj[0].imageURL + "'>" ;
-				message.innerHTML = animalObj[0].messageLink;
-				score.innerHTML += " " + animalObj[0].type + "s";
-				btn.style.display = "block";
-				btn.value = "Play Again";
-			}
-		}, b*50, b)
+		var timer = setTimeout(function(){
+				score.innerHTML = scoreTab;
+				scoreTab++;
+				
+				if (scoreTab == answers.totalScore){
+					animal.innerHTML = "<img id='animalImg' src='" + animalObj[0].imageURL + "'>" ;
+					message.innerHTML = animalObj[0].messageLink;
+					score.innerHTML += " " + animalObj[0].type + "s";
+					btn.style.display = "block";
+					btn.value = "Play Again";
+				}
+			}, b*50, b)
 	}
 }
 
