@@ -3,7 +3,7 @@
 let Model = function(){
 	this.questions = [
 		{
-			"question" : "When eating in a buffet do you eat first?",
+			"question" : "When eating in a buffet what do you eat first?",
 			"options" : {
 				"a" : {
 					"answer":"salad",
