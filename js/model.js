@@ -241,7 +241,7 @@ let Model = function(){
 						"max": 20
 					},
 			"message" : "Clam message",
-			"image" : "../images/clam.png"
+			"imageURL" : "images/clam.png"
 		},
 		{
 			"type": "eagle",
@@ -250,7 +250,7 @@ let Model = function(){
 						"max": 40
 					},
 			"message" : "Eagle message",
-			"image" : "../images/eagle.png"
+			"imageURL" : "images/eagle.png"
 		},
 		{
 			"type": "bat",
@@ -259,16 +259,16 @@ let Model = function(){
 						"max": 60
 					},
 			"message" : "Bat message",
-			"image" : "../images/bat.png"
+			"imageURL" : "images/bat.png"
 		},
 		{
-			"type": "tamaraw",
+			"type": "monkey",
 			"range": {
 						"min": 61,
 						"max": 80
 					},
-			"message" : "Tamaraw message",
-			"image" : "../images/tamaraw.png"
+			"message" : "Monkey message",
+			"imageURL" : "images/monkey.png"
 		},
 		{
 			"type": "pig",
@@ -277,7 +277,7 @@ let Model = function(){
 						"max": 100
 					},
 			"message" : "Pig message",
-			"image" : "../images/pig.png"
+			"imageURL" : "images/pig.png"
 		}
 	];
 }
