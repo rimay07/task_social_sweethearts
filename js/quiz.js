@@ -116,7 +116,7 @@ function displayResults(){
 				
 				if (scoreTab == answers.totalScore){
 					animal.innerHTML = "<img id='animalImg' src='" + animalObj[0].imageURL + "'>" ;
-					message.innerHTML = animalObj[0].messageLink;
+					message.innerHTML = "Click " + animalObj[0].messageLink;
 					score.innerHTML += " " + animalObj[0].type + "s";
 					btn.style.display = "block";
 					btn.value = "Play Again";
